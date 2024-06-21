@@ -5,8 +5,8 @@ function LoginLink(){
     return(
         <div className='loginlinking'>
             <nav>
-                <h1> My application</h1>
-                <h1> Click to login</h1>
+                
+                <h1> Welcome to My application: Please Click to login</h1>
                 <button type='submit'> <Link  to= "/login">Login </Link></button>
             </nav>
         </div>
