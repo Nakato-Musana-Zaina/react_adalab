@@ -1,36 +1,36 @@
 import './index.css';
 import { useState } from 'react';
 import {login} from './utils';
+import { Link, useNavigate} from 'react-router-dom';
 
 const Login = () => {
-
+const navigate = useNavigate();
 const [username, SetUserName]= useState('');
 const [password, SetPassword]= useState('');
 
 console.log({username})
+
 const handleLogin = async (event)=>{
     event.preventDefault();
     const result = await login({ username, password});
-    console.log(result)
-}
+    navigate('./users')
+    console.log({result});
+};
 
-// const display = users.array.forEach(element => {
-//     console.log(element)
-// });
 
-    return (
+return (
 <div>
-<form onSubmit={handleLogin}>
+    <form onSubmit={handleLogin}>
+
 <h2>Login</h2>
     <input placeholder="user name" type="text" onChange={(event)=> SetUserName(event.target.value)}/>
     <br/>
-    <input placeholder="Enter Password" type="text" onChange={(event)=> SetPassword(event.target.value)}/>
+    <input placeholder="Enter Password" type="password" onChange={(event)=> SetPassword(event.target.value)}/>
     <br/>
-<button type="submit">
-    login
-</button>
+    <Link to="/users"> <button type="submit">login</button></Link>
+
 </form>
-</div>
+    </div>
 
  )
 }

@@ -1,7 +1,7 @@
 import { getusers } from "../utils"
 import { useEffect, useState } from "react"
 
-export const useGetUsers = ()=>{
+const useGetUsers = ()=>{
     const [users,setUsers] = useState([]);
     const [error, setError] = useState('');
     const [loading, setloading] = useState(false);
@@ -23,9 +23,11 @@ export const useGetUsers = ()=>{
                 setError(`Error: ${error.message}`)
                 setloading(false);
             }
-        };
+        }
         fetchUsers();
     }, []);
 
     return{users,error,loading}
 };
+
+export default useGetUsers;

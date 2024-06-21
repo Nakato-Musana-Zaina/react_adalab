@@ -14,4 +14,4 @@ const UserCard=({image,fullName,age,gender,address}) =>{
         
     )
 }
-export default UserCard ;
+export default UserCard;

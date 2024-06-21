@@ -1,0 +1,10 @@
+button{
+    color: aliceblue;
+    background-color: blue;
+    padding: 18px;
+    border-radius: 30px;
+    width: 50%;
+    margin-left: 20%;
+    text-decoration: none;
+    margin-bottom: 3%;
+}
